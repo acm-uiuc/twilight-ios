@@ -30,7 +30,7 @@ class SystemStatusViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NodeDetailCell", for: indexPath)
         if let _ = cell as? NodeDetailCell {
-
+            
         }
         return cell
     }

@@ -10,15 +10,23 @@ import Foundation
 import UIKit
 
 class NodeDetailCell: UITableViewCell {
-    @IBOutlet weak var serialNumberLabel: UILabel!
-    @IBOutlet weak var ipAddressLabel:    UILabel!
-    @IBOutlet weak var dateAddedLabel:    UILabel!
+    @IBOutlet weak var macAddressLabel: UILabel!
+    @IBOutlet weak var ipAddressLabel:  UILabel!
+    @IBOutlet weak var dateAddedLabel:  UILabel!
 
+    @IBOutlet weak var indicatorView:   UIView!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        indicatorView.layer.cornerRadius = 8
+    }
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        serialNumberLabel.text = "Serial Number"
-        ipAddressLabel.text = "IP Address"
-        dateAddedLabel.text = "Date Added"
+        macAddressLabel.text = "Mac Address"
+        ipAddressLabel.text  = "IP Address"
+        dateAddedLabel.text  = "Date Added"
     }
+
+    
 }

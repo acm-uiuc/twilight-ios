@@ -9,5 +9,5 @@
 import Foundation
 
 struct APISecrets {
-    static let GROOT_CLIENT_KEY = "key here"
+    static let GROOT_CLIENT_KEY = "YUrD7Q2TSTDQ01igqmIdLmHUDmgPsyYrgJOH3JZna8I="
 }

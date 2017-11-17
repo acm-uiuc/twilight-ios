@@ -33,7 +33,6 @@ class ControlPanelViewController: UIViewController, UITableViewDelegate, UITable
         sender.endRefreshing()
     }
 
-
     // MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
@@ -63,28 +62,28 @@ class ControlPanelViewController: UIViewController, UITableViewDelegate, UITable
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell
+        var cell: UITableViewCell?
 
         switch indexPath.section {
         case 0:
-            cell = tableView.dequeueReusableCell(withIdentifier: "SwitchCell", for: indexPath)
+            cell = tableView.dequeueReusableCell(withIdentifier: SwitchCell.REUSE_IDENTIFIER, for: indexPath)
             if let cell = cell as? SwitchCell {
                 cell.fieldLabel.text = "Power"
                 cell.actionSwitch.setOn(true, animated: false)
             }
 
         case 1:
-            cell = tableView.dequeueReusableCell(withIdentifier: "ActionCell", for: indexPath)
+            cell = tableView.dequeueReusableCell(withIdentifier: ActionCell.REUSE_IDENTIFIER, for: indexPath)
             if let cell = cell as? ActionCell {
                 cell.fieldLabel.text = "Rain Animation"
                 cell.actionButton.setTitle("Launch", for: .normal)
             }
 
         default:
-            cell = UITableViewCell()
+            break
         }
 
-        return cell
+        return cell ?? UITableViewCell()
     }
 
 

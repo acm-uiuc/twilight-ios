@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class NodeDetailCell: UITableViewCell {
+    static let REUSE_IDENTIFIER = "NodeDetailCell"
+
     @IBOutlet weak var macAddressLabel: UILabel!
     @IBOutlet weak var ipAddressLabel:  UILabel!
     @IBOutlet weak var dateAddedLabel:  UILabel!
@@ -27,6 +29,4 @@ class NodeDetailCell: UITableViewCell {
         ipAddressLabel.text  = "IP Address"
         dateAddedLabel.text  = "Date Added"
     }
-
-    
 }

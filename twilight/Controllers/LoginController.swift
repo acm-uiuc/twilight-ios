@@ -21,5 +21,12 @@ class LoginController {
 
     }
 
+    func writeUserToDisk() {
+
+    }
+
+    func refreshUser() {
+
+    }
 
 }

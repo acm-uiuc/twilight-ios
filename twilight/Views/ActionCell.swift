@@ -14,6 +14,7 @@ protocol ActionCellDelegate {
 }
 
 class ActionCell: UITableViewCell {
+    static let REUSE_IDENTIFIER = "ActionCell"
 
     var indexPath: IndexPath?
     var delegate: ActionCellDelegate?

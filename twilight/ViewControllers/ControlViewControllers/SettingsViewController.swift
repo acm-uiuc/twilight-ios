@@ -45,19 +45,19 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
 
         switch type {
         case .name:
-            cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell", for: indexPath)
+            cell = tableView.dequeueReusableCell(withIdentifier: InfoCell.REUSE_IDENTIFIER, for: indexPath)
             if let cell = cell as? InfoCell, let user = LoginController.shared.currentUser {
                 cell.fieldLabel.text = "User"
                 cell.responseLabel.text = "\(user.firstName.capitalized) \(user.lastName.capitalized)"
             }
         case .netID:
-            cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell", for: indexPath)
+            cell = tableView.dequeueReusableCell(withIdentifier: InfoCell.REUSE_IDENTIFIER, for: indexPath)
             if let cell = cell as? InfoCell, let user = LoginController.shared.currentUser {
                 cell.fieldLabel.text = "NetID"
                 cell.responseLabel.text = "\(user.netID.lowercased())"
             }
         case .logout:
-            cell = tableView.dequeueReusableCell(withIdentifier: "ActionCell", for: indexPath)
+            cell = tableView.dequeueReusableCell(withIdentifier: ActionCell.REUSE_IDENTIFIER, for: indexPath)
             if let cell = cell as? ActionCell {
                 cell.indexPath = indexPath
                 cell.delegate = self

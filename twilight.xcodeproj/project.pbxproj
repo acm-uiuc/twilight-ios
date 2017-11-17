@@ -23,10 +23,14 @@
 		950366B61FB8068A003A22B0 /* LoginAwareTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950366B51FB8068A003A22B0 /* LoginAwareTabBarController.swift */; };
 		95350ABA1FB7C7DE00B3D0F5 /* twilightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95350AB91FB7C7DE00B3D0F5 /* twilightTests.swift */; };
 		95350AC51FB7C7DE00B3D0F5 /* twilightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95350AC41FB7C7DE00B3D0F5 /* twilightUITests.swift */; };
+		9587371C1FBA7BBC0049951F /* TwilightNodeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587371B1FBA7BBC0049951F /* TwilightNodeDatasource.swift */; };
+		9587371E1FBA7C5C0049951F /* TwilightNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587371D1FBA7C5C0049951F /* TwilightNode.swift */; };
 		958B824C1FB927750024095E /* ControlPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958B824B1FB927750024095E /* ControlPanelViewController.swift */; };
 		958D16801FB81F910010AC66 /* SystemStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D167F1FB81F910010AC66 /* SystemStatusViewController.swift */; };
 		958D16821FB8208A0010AC66 /* NodeDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D16811FB8208A0010AC66 /* NodeDetailCell.swift */; };
 		958D16841FB825840010AC66 /* HairlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958D16831FB825840010AC66 /* HairlineView.swift */; };
+		95A24D1B1FBA7D4B00541873 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A24D1A1FBA7D4B00541873 /* DataSource.swift */; };
+		95A24D1D1FBA8EB600541873 /* CellLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A24D1C1FBA8EB600541873 /* CellLoading.swift */; };
 		95C942071FB9051C00722946 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C942061FB9051C00722946 /* InfoCell.swift */; };
 		95C942091FB9067E00722946 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C942081FB9067E00722946 /* SettingsViewController.swift */; };
 		95C9420B1FB90D0E00722946 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C9420A1FB90D0E00722946 /* ActionCell.swift */; };
@@ -79,10 +83,14 @@
 		95350AC01FB7C7DE00B3D0F5 /* twilightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = twilightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95350AC41FB7C7DE00B3D0F5 /* twilightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twilightUITests.swift; sourceTree = "<group>"; };
 		95350AC61FB7C7DE00B3D0F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9587371B1FBA7BBC0049951F /* TwilightNodeDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwilightNodeDatasource.swift; sourceTree = "<group>"; };
+		9587371D1FBA7C5C0049951F /* TwilightNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwilightNode.swift; sourceTree = "<group>"; };
 		958B824B1FB927750024095E /* ControlPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPanelViewController.swift; sourceTree = "<group>"; };
 		958D167F1FB81F910010AC66 /* SystemStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStatusViewController.swift; sourceTree = "<group>"; };
 		958D16811FB8208A0010AC66 /* NodeDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeDetailCell.swift; sourceTree = "<group>"; };
 		958D16831FB825840010AC66 /* HairlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HairlineView.swift; sourceTree = "<group>"; };
+		95A24D1A1FBA7D4B00541873 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		95A24D1C1FBA8EB600541873 /* CellLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellLoading.swift; sourceTree = "<group>"; };
 		95C942061FB9051C00722946 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
 		95C942081FB9067E00722946 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		95C9420A1FB90D0E00722946 /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
@@ -135,12 +143,13 @@
 		9503668B1FB7DC58003A22B0 /* twilight */ = {
 			isa = PBXGroup;
 			children = (
+				950366941FB7DC58003A22B0 /* AppDelegate.swift */,
 				950366B21FB80293003A22B0 /* Controllers */,
+				9587371A1FBA7BA60049951F /* DataSources */,
 				9503668C1FB7DC58003A22B0 /* Storyboards */,
 				9503668F1FB7DC58003A22B0 /* Models */,
 				950366901FB7DC58003A22B0 /* ViewControllers */,
 				950366921FB7DC58003A22B0 /* APIServices */,
-				950366941FB7DC58003A22B0 /* AppDelegate.swift */,
 				950366951FB7DC58003A22B0 /* Views */,
 			);
 			path = twilight;
@@ -160,6 +169,7 @@
 			children = (
 				950366A31FB7E1EF003A22B0 /* GrootReturnDataContainer.swift */,
 				950366A51FB7E2D7003A22B0 /* GrootUser.swift */,
+				9587371D1FBA7C5C0049951F /* TwilightNode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,6 +203,7 @@
 				95C9420A1FB90D0E00722946 /* ActionCell.swift */,
 				958D16811FB8208A0010AC66 /* NodeDetailCell.swift */,
 				958D16831FB825840010AC66 /* HairlineView.swift */,
+				95A24D1C1FBA8EB600541873 /* CellLoading.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,6 +283,15 @@
 				95350AC61FB7C7DE00B3D0F5 /* Info.plist */,
 			);
 			path = twilightUITests;
+			sourceTree = "<group>";
+		};
+		9587371A1FBA7BA60049951F /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				95A24D1A1FBA7D4B00541873 /* DataSource.swift */,
+				9587371B1FBA7BBC0049951F /* TwilightNodeDatasource.swift */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 		A70D87B4DC1745DAFED42DD9 /* Pods */ = {
@@ -590,15 +610,19 @@
 				950366AF1FB7FF33003A22B0 /* UIViewController.swift in Sources */,
 				9503669A1FB7DC59003A22B0 /* AppDelegate.swift in Sources */,
 				950366A41FB7E1EF003A22B0 /* GrootReturnDataContainer.swift in Sources */,
+				95A24D1D1FBA8EB600541873 /* CellLoading.swift in Sources */,
 				95C942091FB9067E00722946 /* SettingsViewController.swift in Sources */,
+				9587371E1FBA7C5C0049951F /* TwilightNode.swift in Sources */,
 				950366B41FB802D0003A22B0 /* LoginController.swift in Sources */,
 				950366A61FB7E2D7003A22B0 /* GrootUser.swift in Sources */,
 				950366A21FB7DDDA003A22B0 /* GrootService.swift in Sources */,
 				950366B61FB8068A003A22B0 /* LoginAwareTabBarController.swift in Sources */,
 				950366AE1FB7FF33003A22B0 /* LoginViewController.swift in Sources */,
 				958D16801FB81F910010AC66 /* SystemStatusViewController.swift in Sources */,
+				9587371C1FBA7BBC0049951F /* TwilightNodeDatasource.swift in Sources */,
 				95C9420B1FB90D0E00722946 /* ActionCell.swift in Sources */,
 				9503669C1FB7DC74003A22B0 /* APISecrets.swift in Sources */,
+				95A24D1B1FBA7D4B00541873 /* DataSource.swift in Sources */,
 				95C942071FB9051C00722946 /* InfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

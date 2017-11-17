@@ -9,30 +9,19 @@
 import Foundation
 import UIKit
 
-class SystemStatusViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SystemStatusViewController: UIViewController, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
+
+    let nodes = TwilightNodeDatasource()
 
     // MARK: - UIViewController
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.dataSource = nodes
+    }
 
     // MARK: - UITableViewDelegate
 
-
-    // MARK: - UITableViewDataSource
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NodeDetailCell", for: indexPath)
-        if let _ = cell as? NodeDetailCell {
-            
-        }
-        return cell
-    }
 
 }

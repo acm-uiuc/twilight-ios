@@ -14,6 +14,7 @@ protocol SwitchCellDelegate {
 }
 
 class SwitchCell: UITableViewCell {
+    static let REUSE_IDENTIFIER = "SwitchCell"
 
     var indexPath: IndexPath?
     var delegate: SwitchCellDelegate?

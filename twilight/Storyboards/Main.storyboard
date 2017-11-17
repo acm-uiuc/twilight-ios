@@ -464,7 +464,6 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="awr-6B-tgE" id="VoP-og-EGc"/>
                                     <outlet property="delegate" destination="awr-6B-tgE" id="zLx-iD-82E"/>
                                 </connections>
                             </tableView>
@@ -535,6 +534,9 @@
                         <viewLayoutGuide key="safeArea" id="pSl-xd-mm3"/>
                     </view>
                     <navigationItem key="navigationItem" title="System Status" id="wGB-gQ-C54"/>
+                    <connections>
+                        <outlet property="tableView" destination="x9Q-pe-II5" id="Pfa-c0-uRU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3LH-SN-cjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class InfoCell: UITableViewCell {
+    static let REUSE_IDENTIFIER = "InfoCell"
+
     @IBOutlet weak var fieldLabel:    UILabel!
     @IBOutlet weak var responseLabel: UILabel!
 

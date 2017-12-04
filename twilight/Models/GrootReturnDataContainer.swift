@@ -9,6 +9,7 @@
 import Foundation
 import APIManager
 
+
 class GrootReturnDataContainer<ReturnData: Codable>: Codable, APIReturnable {
 
     var data: ReturnData?
@@ -26,4 +27,3 @@ class GrootReturnDataContainer<ReturnData: Codable>: Codable, APIReturnable {
     }
 
 }
-

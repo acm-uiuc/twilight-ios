@@ -84,7 +84,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let password = passwordField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
 
         guard netID != "" && password != "" else {
-            presentErrorViewController(withTitle: "Incomplete", dismissParentOnCompletion: false)
+            presentErrorController(title: "Incomplete", dismissParentOnCompletion: false)
             return
         }
 
@@ -101,7 +101,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             } else {
                 let reason = userContainer.error ?? "Unknown error occured. Try again later."
                 DispatchQueue.main.async {
-                    self.presentErrorViewController(withTitle: "Error", andMessage: reason, dismissParentOnCompletion: false)
+                    self.presentErrorController(title: "Error", message: reason, dismissParentOnCompletion: false)
                     self.loginButton.isEnabled = true
                     self.loginButton.alpha     = 1.0
                 }
@@ -109,7 +109,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         .onFailure { (reason) in
             DispatchQueue.main.async {
-                self.presentErrorViewController(withTitle: "Error", andMessage: reason, dismissParentOnCompletion: false)
+                self.presentErrorController(title: "Error", message: reason, dismissParentOnCompletion: false)
                 self.loginButton.isEnabled = true
                 self.loginButton.alpha     = 1.0
             }

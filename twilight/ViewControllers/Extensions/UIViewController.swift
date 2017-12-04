@@ -9,9 +9,19 @@
 import UIKit
 
 extension UIViewController {
-    func presentErrorViewController(withTitle title: String, andMessage message: String? = nil, dismissParentOnCompletion exit: Bool) {
-
+    
+    func presentErrorController(title: String, message: String? = nil, dismissParentOnCompletion exit: Bool) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(
+            UIAlertAction(title: "Ok", style: .default) { (_) in
+                if exit {
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        )
+        present(alert, animated: true, completion: nil)
     }
+    
     //
     // MARK: Keyboard Layout
     //
